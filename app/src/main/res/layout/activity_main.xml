@@ -104,7 +104,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Images of Iron Man"
+        android:text="Versions of Iron Man"
         android:textSize="28sp"
         android:background="@color/color_1"
         android:padding="16dp"
