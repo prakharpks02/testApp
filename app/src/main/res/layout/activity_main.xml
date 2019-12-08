@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/splash_background"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textColor="@color/text_color_light"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/location_textView"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text_color_light"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:text="Location Value" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_1"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_1"
+            android:layout_weight="1"
+            android:onClick="startLocationTrack"
+            android:text="Start"/>
+
+        <Button
+            android:id="@+id/end_button"
+            android:layout_width="wrap_content"
+            android:background="@color/color_1"
+            android:layout_weight="1"
+            android:onClick="stopLocationTracking"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="End"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/test_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/text_color_light"
+        android:text="Testing Value" />
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/color_2"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right">
+
+        <Button
+            android:id="@+id/switch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/color_2"
+            android:hint="Next"
+            android:textSize="20sp"
+            android:textColor="@color/text_color_light"
+            android:onClick="nextView"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type ans here"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="previousView"
+                android:hint="Previous"/>
+
+        </LinearLayout>
+
+    </ViewFlipper>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Images of Iron Man"
+        android:textSize="28sp"
+        android:background="@color/color_1"
+        android:padding="16dp"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/left_arrow_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_1"
+            android:layout_weight="1"
+            android:onClick="imageBackward"/>
+
+        <ImageButton
+            android:id="@+id/right_arrow_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_1"
+            android:src="@drawable/ic_arrow_forward_black_24dp"
+            android:layout_marginRight="20dp"
+            android:onClick="imageForward"/>
+
+
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/view_flipper_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_2"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ironman_1"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ironman_2"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ironman_3"/>
+
+    </ViewFlipper>
+
+</LinearLayout>
+
+
